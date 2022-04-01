@@ -1,0 +1,86 @@
+export const colorThemeList = [
+  {
+    id: 1,
+    primaryColor: '#fef6e4',
+    secondaryColor: '#f3d2c1',
+    textColor: '#f582ae',
+  },
+  {
+    id: 2,
+    primaryColor: '#55423d',
+    secondaryColor: '#271c19',
+    textColor: '#ffc0ad',
+  },
+  {
+    id: 3,
+    primaryColor: '#fffffe',
+    secondaryColor: '#e3f6f5',
+    textColor: '#ffd803',
+  },
+  {
+    id: 4,
+    primaryColor: '#0f0e17',
+    secondaryColor: '#fffffe',
+    textColor: '#ff8906',
+  },
+  {
+    id: 5,
+    primaryColor: '#fffffe',
+    secondaryColor: '#d1d1e9',
+    textColor: '#6246ea',
+  },
+  {
+    id: 6,
+    primaryColor: '#004643',
+    secondaryColor: '#abd1c6',
+    textColor: '#f9bc60',
+  },
+  {
+    id: 7,
+    primaryColor: '#232946',
+    secondaryColor: '#d4d8f0',
+    textColor: '#eebbc3',
+  },
+  {
+    id: 8,
+    primaryColor: '#faeee7',
+    secondaryColor: '#fffffe',
+    textColor: '#ff8ba7',
+  },
+  {
+    id: 9,
+    primaryColor: '#fffffe',
+    secondaryColor: '#f2f4f6',
+    textColor: '#00ebc7',
+  },
+  {
+    id: 10,
+    primaryColor: '#16161a',
+    secondaryColor: '#242629',
+    textColor: '#7f5af0',
+  },
+  {
+    id: 11,
+    primaryColor: '#16161a',
+    secondaryColor: '#242629',
+    textColor: '#059dc0',
+  },
+  {
+    id: 12,
+    primaryColor: '#fffffe',
+    secondaryColor: '#d8eefe',
+    textColor: '#3da9fc',
+  },
+  {
+    id: 13,
+    primaryColor: '#eff0f3',
+    secondaryColor: '#fffffe',
+    textColor: '#ff8e3c',
+  },
+  {
+    id: 14,
+    primaryColor: '#0f0e17',
+    secondaryColor: '#fffffe',
+    textColor: '#d9376e',
+  },
+];
