@@ -1,7 +1,4 @@
-.aboutBlock {
-  max-width: 450px;
-
-  &__inputs {
+  .about {
     padding: 0 20px;
     max-width: 450px;
   
@@ -10,14 +7,12 @@
     justify-content: center;
     align-items: center;
     gap: 16px 24px;
+
+    &__input {
+      width: 100%;
+    
+      :-webkit-autofill {
+        transition: background-color 600000s 0s, color 600000s 0s;
+      }
+    }
   }
-
-}
-
-.aboutBlock__input {
-  width: 100%;
-
-  :-webkit-autofill {
-    transition: background-color 600000s 0s, color 600000s 0s;
-  }
-}

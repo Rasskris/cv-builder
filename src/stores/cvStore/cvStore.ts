@@ -13,6 +13,8 @@ class CvStore {
 
   phone: string = DEFAULT_CV_VALUES.phone;
 
+  skills: Set<string> = DEFAULT_CV_VALUES.skills;
+
   constructor() {
     makeObservable(this, {
       firstName: observable,
@@ -20,11 +22,14 @@ class CvStore {
       summary: observable,
       email: observable,
       phone: observable,
+      skills: observable,
       setFirstName: action.bound,
       setLastName: action.bound,
       setSummary: action.bound,
       setEmail: action.bound,
       setPhone: action.bound,
+      addSkill: action.bound,
+      deleteSkill: action.bound,
     });
   }
 
@@ -46,6 +51,14 @@ class CvStore {
 
   setPhone(newPhone: string): void {
     this.phone = newPhone;
+  }
+
+  addSkill(newSkill: string): void {
+    this.skills.add(newSkill);
+  }
+
+  deleteSkill(skill: string): void {
+    this.skills.delete(skill);
   }
 }
 
