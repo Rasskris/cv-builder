@@ -4,4 +4,5 @@ export type Cv = {
   summary: string;
   phone: string;
   email: string;
+  skills: Set<string>;
 };
