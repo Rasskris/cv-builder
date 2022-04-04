@@ -1,0 +1,14 @@
+.experience {
+  &__input {
+    margin-top: 20px !important;
+    width: 100%;
+
+    :-webkit-autofill {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+}
