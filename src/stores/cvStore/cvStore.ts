@@ -1,6 +1,7 @@
 import { action, makeObservable, observable } from 'mobx';
 
 import { DEFAULT_CV_VALUES } from '../../data';
+import { Experience, Skill } from '../../types';
 
 class CvStore {
   firstName: string = DEFAULT_CV_VALUES.firstName;
@@ -13,7 +14,9 @@ class CvStore {
 
   phone: string = DEFAULT_CV_VALUES.phone;
 
-  skills: Set<string> = DEFAULT_CV_VALUES.skills;
+  skillList: Skill[] = DEFAULT_CV_VALUES.skillList;
+
+  experienceList: Experience[] = DEFAULT_CV_VALUES.experienceList;
 
   constructor() {
     makeObservable(this, {
@@ -22,14 +25,17 @@ class CvStore {
       summary: observable,
       email: observable,
       phone: observable,
-      skills: observable,
+      skillList: observable,
+      experienceList: observable,
       setFirstName: action.bound,
       setLastName: action.bound,
       setSummary: action.bound,
       setEmail: action.bound,
       setPhone: action.bound,
       addSkill: action.bound,
+      addExperience: action.bound,
       deleteSkill: action.bound,
+      deleteExperience: action.bound,
     });
   }
 
@@ -53,12 +59,20 @@ class CvStore {
     this.phone = newPhone;
   }
 
-  addSkill(newSkill: string): void {
-    this.skills.add(newSkill);
+  addSkill(newSkill: Skill): void {
+    this.skillList.push(newSkill);
   }
 
-  deleteSkill(skill: string): void {
-    this.skills.delete(skill);
+  addExperience(experience: Experience): void {
+    this.experienceList.push(experience);
+  }
+
+  deleteSkill(skillId: string): void {
+    this.skillList = this.skillList.filter(({ id }) => id !== skillId);
+  }
+
+  deleteExperience(experienceId: string): void {
+    this.experienceList = this.experienceList.filter(({ id }) => id !== experienceId);
   }
 }
 
