@@ -11,6 +11,14 @@ export type Skill = {
   name: string;
 };
 
+export type Project = {
+  id: string;
+  name: string;
+  description: string;
+  repositoryURL?: string;
+  demoURL?: string;
+};
+
 export type Cv = {
   firstName: string;
   lastName: string;
@@ -19,4 +27,5 @@ export type Cv = {
   email: string;
   skillList: Skill[];
   experienceList: Experience[];
+  projectList: Project[];
 };
