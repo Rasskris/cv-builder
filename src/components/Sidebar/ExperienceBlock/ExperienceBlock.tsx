@@ -5,7 +5,7 @@ import type { DateRange } from '@mui/lab/DateRangePicker';
 import uniqueId from 'lodash/uniqueId';
 
 import cvStore from '../../../stores/cvStore';
-import { ValidateFunction } from '../../../types';
+import { Experience, ValidateFunction } from '../../../types';
 import { useForm } from '../../../hooks';
 import { DateRangePicker } from './DateRangePicker';
 import { BlockWrapper } from '../BlockWrapper';
@@ -15,7 +15,7 @@ import { getChipListData } from './helpers/getChipListData';
 import { isRequired } from '../../../helpers';
 import classes from './ExperienceBlock.module.scss';
 
-const initialState = {
+const initialState: Omit<Experience, 'id' | 'startEndDate'> = {
   jobTitle: '',
   employer: '',
   description: '',
@@ -60,8 +60,8 @@ export const ExperienceBlock: FC = observer(() => {
 
   return (
     <BlockWrapper blockName="Experience">
+      <ChipList data={chipListData} onDelete={handleDeleteExperience} />
       <form onSubmit={handleSubmit(onSubmit)} className={classes.experience}>
-        <ChipList data={chipListData} onDelete={handleDeleteExperience} />
         <DateRangePicker dateValue={dateValue} setDateValue={setDateValue} />
         <Input
           className={classes.experience__input}
