@@ -1,33 +1,34 @@
 import { FC, useState, MouseEventHandler } from 'react';
 import { observer } from 'mobx-react-lite';
-import Chip from '@mui/material/Chip';
+import uniqueId from 'lodash/uniqueId';
 
 import cvStore from '../../../stores/cvStore';
 import { BlockWrapper } from '../BlockWrapper';
+import { ChipList } from '../ChipList';
 import { Input, Button } from '../../ui';
 import classes from './SkillsBlock.module.scss';
 
 export const SkillsBlock: FC = observer(() => {
   const [skill, setSkill] = useState('');
-  const { skills, addSkill, deleteSkill } = cvStore;
+  const { skillList, addSkill, deleteSkill } = cvStore;
 
   const handleAddSkill: MouseEventHandler<HTMLButtonElement> = () => {
-    addSkill(skill);
+    addSkill({
+      id: uniqueId(),
+      name: skill,
+    });
     setSkill('');
+  };
+
+  const handleDeleteSkill = (skillId: string) => () => {
+    deleteSkill(skillId);
   };
 
   return (
     <BlockWrapper blockName="Skills">
       <div className={classes.skills}>
         <div className={classes.skills__list}>
-          {[...skills].map(skill => (
-            <Chip
-              key={skill}
-              className={classes.skills__item}
-              label={skill}
-              onDelete={() => deleteSkill(skill)}
-            />
-          ))}
+          <ChipList data={skillList} onDelete={handleDeleteSkill} />
         </div>
         <Input
           className={classes.skills__input}
