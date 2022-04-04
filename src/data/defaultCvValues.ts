@@ -1,8 +1,8 @@
 import uniqueId from 'lodash/uniqueId';
 
-import { Cv, Experience } from '../types';
+import { Cv, Experience, Skill, Project } from '../types';
 
-const skills = [
+const skillList: Skill[] = [
   { id: uniqueId(), name: 'TypeScript' },
   { id: uniqueId(), name: 'JavaScript' },
   { id: uniqueId(), name: 'React' },
@@ -21,13 +21,23 @@ const skills = [
   { id: uniqueId(), name: 'PostgreSQL' },
 ];
 
-const experience: Experience[] = [
+const experienceList: Experience[] = [
   {
     id: uniqueId(),
     jobTitle: 'Front-end developer',
     employer: 'Epam',
     startEndDate: [null, null],
     description: 'Building stable and maintainable codebases using React',
+  },
+];
+
+const projectList: Project[] = [
+  {
+    id: uniqueId(),
+    name: 'English fro kids',
+    description: 'Application for study english at playing form',
+    repositoryURL: 'https://github.com/Rasskris/English-for-kids-FE',
+    demoURL: 'https://english-for-kids.online/',
   },
 ];
 
@@ -38,6 +48,7 @@ export const DEFAULT_CV_VALUES: Cv = {
     'Frontend Developer is seeking an opportunity to extend my web development skills and knowledge',
   phone: '8-987-779-88-34',
   email: 'rs.kris@gmail.com',
-  skillList: skills,
-  experienceList: experience,
+  skillList,
+  experienceList,
+  projectList,
 };
