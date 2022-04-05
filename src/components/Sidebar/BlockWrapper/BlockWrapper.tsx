@@ -12,16 +12,14 @@ type Props = {
 };
 
 export const BlockWrapper: FC<Props> = ({ blockName, children }) => (
-  <div className={classes.blockWrapper}>
-    <Accordion style={{ backgroundColor: 'rgb(20, 20, 20)' }}>
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}
-        aria-controls="panel1a-content"
-        id="panel1a-header"
-      >
-        <Typography style={{ color: '#fff' }}>{blockName}</Typography>
-      </AccordionSummary>
-      <AccordionDetails>{children}</AccordionDetails>
-    </Accordion>
-  </div>
+  <Accordion className={classes.blockWrapper}>
+    <AccordionSummary
+      expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}
+      aria-controls="panel1a-content"
+      id="panel1a-header"
+    >
+      <Typography className={classes.blockWrapper__title}>{blockName}</Typography>
+    </AccordionSummary>
+    <AccordionDetails>{children}</AccordionDetails>
+  </Accordion>
 );
