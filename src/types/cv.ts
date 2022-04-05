@@ -19,6 +19,14 @@ export type Project = {
   demoURL?: string;
 };
 
+export type Links = {
+  linkedIn?: string;
+  github?: string;
+  leetcode?: string;
+  telegram?: string;
+  other?: string;
+};
+
 export type Cv = {
   firstName: string;
   lastName: string;
@@ -28,4 +36,13 @@ export type Cv = {
   skillList: Skill[];
   experienceList: Experience[];
   projectList: Project[];
+  links: Links;
 };
+
+export enum LinkName {
+  GITHUB = 'github',
+  TELEGRAM = 'telegram',
+  LINKEDIN = 'linkedIn',
+  LEETCODE = 'leetcode',
+  OTHER = 'other',
+}
