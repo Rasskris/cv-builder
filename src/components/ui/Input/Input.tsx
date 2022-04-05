@@ -7,10 +7,15 @@ export const Input = styled(TextField)({
   },
   '& label': {
     color: 'grey',
+    fontSize: '1rem',
+    lineHeight: '1.4375em',
   },
 
   '& .MuiOutlinedInput-root': {
     color: 'white',
+    fontFamily: "'Poppins', sans-serif",
+    fontSize: '1rem',
+    lineHeight: '1.4375em',
 
     '& fieldset': {
       borderColor: 'grey',
