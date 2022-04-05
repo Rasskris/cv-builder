@@ -1,6 +1,6 @@
 import uniqueId from 'lodash/uniqueId';
 
-import { Cv, Experience, Skill, Project } from '../types';
+import { Cv, Experience, Skill, Project, Links } from '../types';
 
 const skillList: Skill[] = [
   { id: uniqueId(), name: 'TypeScript' },
@@ -41,6 +41,14 @@ const projectList: Project[] = [
   },
 ];
 
+const links: Links = {
+  github: 'https://github.com/username',
+  leetcode: 'https://leetcode.com/username',
+  telegram: 'https://t.me/username',
+  linkedIn: 'https://www.linkedin.com/in/username',
+  other: 'https://your-site.com/',
+};
+
 export const DEFAULT_CV_VALUES: Cv = {
   firstName: 'Kristina',
   lastName: 'Rassoshenko',
@@ -51,4 +59,5 @@ export const DEFAULT_CV_VALUES: Cv = {
   skillList,
   experienceList,
   projectList,
+  links,
 };
