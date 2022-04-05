@@ -1,7 +1,7 @@
 import { action, makeObservable, observable } from 'mobx';
 
 import { DEFAULT_CV_VALUES } from '../../data';
-import { Experience, Project, Skill } from '../../types';
+import { Experience, LinkName, Links, Project, Skill } from '../../types';
 
 class CvStore {
   firstName: string = DEFAULT_CV_VALUES.firstName;
@@ -20,6 +20,8 @@ class CvStore {
 
   projectList: Project[] = DEFAULT_CV_VALUES.projectList;
 
+  links: Links = DEFAULT_CV_VALUES.links;
+
   constructor() {
     makeObservable(this, {
       firstName: observable,
@@ -30,11 +32,13 @@ class CvStore {
       skillList: observable,
       experienceList: observable,
       projectList: observable,
+      links: observable,
       setFirstName: action.bound,
       setLastName: action.bound,
       setSummary: action.bound,
       setEmail: action.bound,
       setPhone: action.bound,
+      setLink: action.bound,
       addSkill: action.bound,
       addExperience: action.bound,
       addProject: action.bound,
@@ -62,6 +66,10 @@ class CvStore {
 
   setPhone(newPhone: string): void {
     this.phone = newPhone;
+  }
+
+  setLink(linkName: LinkName, linkValue: string): void {
+    this.links[linkName] = linkValue;
   }
 
   addSkill(skill: Skill): void {
