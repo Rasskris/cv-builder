@@ -1,24 +1,20 @@
-import { FC } from 'react';
+import { ChangeEventHandler, FC } from 'react';
 import { observer } from 'mobx-react-lite';
 
 import cvStore from '../../../stores/cvStore';
+import { AboutName } from '../../../types';
 import { Input } from '../../ui';
 import { BlockWrapper } from '../BlockWrapper';
 import classes from './AboutBlock.module.scss';
 
 export const AboutBlock: FC = observer(() => {
-  const {
-    firstName,
-    lastName,
-    summary,
-    email,
-    phone,
-    setFirstName,
-    setLastName,
-    setSummary,
-    setEmail,
-    setPhone,
-  } = cvStore;
+  const { about, setAbout } = cvStore;
+
+  const handleChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
+    const { name, value } = target;
+
+    setAbout(name as AboutName, value);
+  };
 
   return (
     <BlockWrapper blockName="About">
@@ -26,35 +22,40 @@ export const AboutBlock: FC = observer(() => {
         <Input
           className={classes.about__input}
           label="First name"
-          value={firstName}
-          onChange={({ target }) => setFirstName(target.value)}
+          name={AboutName.FIRST_NAME}
+          value={about.firstName}
+          onChange={handleChange}
         />
         <Input
           className={classes.about__input}
           label="Last name"
-          value={lastName}
-          onChange={({ target }) => setLastName(target.value)}
+          name={AboutName.LAST_NAME}
+          value={about.lastName}
+          onChange={handleChange}
         />
         <Input
           className={classes.about__input}
           label="Summary"
+          name={AboutName.SUMMARY}
           multiline
           rows={4}
-          value={summary}
-          onChange={({ target }) => setSummary(target.value)}
+          value={about.summary}
+          onChange={handleChange}
         />
         <Input
           className={classes.about__input}
           label="Phone"
-          value={phone}
-          onChange={({ target }) => setPhone(target.value)}
+          name={AboutName.PHONE}
+          value={about.phone}
+          onChange={handleChange}
         />
         <Input
           className={classes.about__input}
           label="Email"
+          name={AboutName.EMAIL}
           type="email"
-          value={email}
-          onChange={({ target }) => setEmail(target.value)}
+          value={about.email}
+          onChange={handleChange}
         />
       </div>
     </BlockWrapper>

@@ -1,3 +1,3 @@
-export type { Cv, Experience, Skill, Project, Links } from './cv';
+export type { Cv, About, Experience, Skill, Project, Links } from './cv';
 export type { ValidateFunction, FormErrorsObject, FormValuesObject } from './form';
-export { LinkName } from './cv';
+export { AboutName, LinkName } from './cv';
