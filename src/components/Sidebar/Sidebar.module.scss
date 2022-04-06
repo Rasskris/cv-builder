@@ -1,4 +1,11 @@
+@import '../../styles/mixins';
+
 .sidebar {
+  @include scrollbar(
+		$thumb-color: #7775,
+		$background-color: rgba(98, 98, 98, 0.333),
+	);
+
   overflow-y: scroll;
   width: 30%;
   max-width: 450px;
