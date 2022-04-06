@@ -1,0 +1,19 @@
+@import '../../styles/mixins';
+
+.templatePreview {
+  @include scrollbar(
+		$thumb-color: #7775,
+		$background-color: rgba(98, 98, 98, 0.333),
+	);
+
+  overflow-y: scroll;
+  width: 70%;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: var(--m-background-color);
+}

@@ -1,0 +1,36 @@
+.links {
+  padding: 50px;
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(3, 3, 3);
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(n) {
+    margin-bottom: 5px;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    color: #fff !important;
+  }
+  
+  &__text {
+    font-size: 12px !important;
+  }
+}
