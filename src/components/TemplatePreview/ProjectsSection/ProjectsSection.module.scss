@@ -1,0 +1,25 @@
+.projects {
+  padding: 50px;
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #242629;
+
+  &__title {
+    margin-bottom: 28px;
+
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+  }
+}

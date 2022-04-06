@@ -1,18 +1,18 @@
 import { action, makeObservable, observable } from 'mobx';
 
 import { DEFAULT_CV_VALUES } from '../../data';
-import { Experience, LinkName, Links, Project, Skill } from '../../types';
+import {
+  About,
+  Skill,
+  Experience,
+  Project,
+  Links,
+  AboutName,
+  LinkName,
+} from '../../types';
 
 class CvStore {
-  firstName: string = DEFAULT_CV_VALUES.firstName;
-
-  lastName: string = DEFAULT_CV_VALUES.lastName;
-
-  summary: string = DEFAULT_CV_VALUES.summary;
-
-  email: string = DEFAULT_CV_VALUES.email;
-
-  phone: string = DEFAULT_CV_VALUES.phone;
+  about: About = DEFAULT_CV_VALUES.about;
 
   skillList: Skill[] = DEFAULT_CV_VALUES.skillList;
 
@@ -24,20 +24,12 @@ class CvStore {
 
   constructor() {
     makeObservable(this, {
-      firstName: observable,
-      lastName: observable,
-      summary: observable,
-      email: observable,
-      phone: observable,
+      about: observable,
       skillList: observable,
       experienceList: observable,
       projectList: observable,
       links: observable,
-      setFirstName: action.bound,
-      setLastName: action.bound,
-      setSummary: action.bound,
-      setEmail: action.bound,
-      setPhone: action.bound,
+      setAbout: action.bound,
       setLink: action.bound,
       addSkill: action.bound,
       addExperience: action.bound,
@@ -48,24 +40,8 @@ class CvStore {
     });
   }
 
-  setFirstName(newFirstName: string): void {
-    this.firstName = newFirstName;
-  }
-
-  setLastName(newLastName: string): void {
-    this.lastName = newLastName;
-  }
-
-  setSummary(newSummary: string): void {
-    this.summary = newSummary;
-  }
-
-  setEmail(newEmail: string): void {
-    this.email = newEmail;
-  }
-
-  setPhone(newPhone: string): void {
-    this.phone = newPhone;
+  setAbout(aboutName: AboutName, aboutValue: string): void {
+    this.about[aboutName] = aboutValue;
   }
 
   setLink(linkName: LinkName, linkValue: string): void {

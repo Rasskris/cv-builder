@@ -1,0 +1,47 @@
+.projectCard {
+  padding: 12px;
+  width: calc(50% - 16px);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid transparent;
+  background-color: var(--m-background-color);
+
+  &__about {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    color: #fff;
+  }
+
+  &__description {
+    color: gray;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__linkIcon {
+    margin-right: 5px;
+    color: #fff !important;
+  }
+
+  &__linkText {
+    font-size: 12px !important;
+  }
+}
