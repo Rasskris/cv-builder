@@ -7,6 +7,7 @@ import { ProjectsBlock } from './ProjectsBlock';
 import { LinksBlock } from './LinksBlock';
 import classes from './Sidebar.module.scss';
 import { Button } from '../ui';
+import { SkillsBlock } from './SkillsBlock';
 
 export const Sidebar: FC = () => {
   return (
@@ -14,6 +15,7 @@ export const Sidebar: FC = () => {
       <div className={classes.sidebar__blocks}>
         <ThemeBlock />
         <AboutBlock />
+        <SkillsBlock />
         <ExperienceBlock />
         <ProjectsBlock />
         <LinksBlock />
