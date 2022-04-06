@@ -1,0 +1,20 @@
+@mixin scrollbar(
+	$size: 5px,
+	$thumb-color,
+	$background-color: mix($thumb-color, white, 50%)
+) {
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $thumb-color;
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $background-color;
+		border-radius: 10px;
+	}
+}
