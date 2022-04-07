@@ -1,11 +1,11 @@
 .links {
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
   width: 100%;
   max-width: 1200px;
 
   display: flex;
   flex-direction: column;
-  background-color: rgb(3, 3, 3);
+  background-color: var(--links-background);
 
 
   &__list {
@@ -27,10 +27,16 @@
 
   &__icon {
     margin-right: 5px;
-    color: #fff !important;
+    color: var(	--links-icon) !important;
+
+    &:hover {
+      color: var(--links-icon-hover);
+    }
   }
   
   &__text {
-    font-size: 12px !important;
+    font-size: 13px !important;
+    text-decoration: none !important;
+    color: var(--links-text) !important;
   }
 }

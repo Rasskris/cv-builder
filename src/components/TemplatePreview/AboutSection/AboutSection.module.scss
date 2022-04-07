@@ -23,13 +23,13 @@
     justify-content: center;
     align-items: flex-start;
 
-    color: #bab5b5;
+    color: var(--contacts-color);
   }
 
   &__contactIcon {
     margin-right: 5px;
 
-    color: #fff;
+    color: var(--contacts-color) !important;
   }
 
 
@@ -38,7 +38,7 @@
 
     font-size: 48px;
     font-weight: 900;
-    color: var(--m-main-purple-color);
+    color: var(--user-name-color);
   }
 
   &__summary {
@@ -48,6 +48,6 @@
     font-size: 20px;
     font-weight: 700;
     text-align: center;
-    color: #fff;
+    color: var(--user-summary-color);
   }
 }

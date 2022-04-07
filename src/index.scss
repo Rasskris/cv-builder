@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap');
 
 :root {
-  --m-background-color: #000;
-  --m-main-purple-color: #7b61ff;
+	--main-background-color: #000;
+	--m-main-purple-color: #7b61ff;
+	--contacts-color: '#6c6c6b';
+	--user-name-color: #7b61ff;
+	--user-summary-color: #ffffff;
+	--skills-title: #ffffff;
+	--skills-background: #242629;
+	--skills-card-background: #7b61ff;
+	--skills-card-text: #ffffff;
+	--experience-title: #ffffff;
+	--experience-background: #000;
+	--experience-position: #ffffff;
+	--experience-description: #ffffff;
+	--projects-title: #ffffff;
+	--projects-background: #242629;
+	--projects-card-background: #000;
+	--project-card-title: #ffffff;
+	--projects-card-description: #6c6c6b;
+	--projects-card-link: #fffffe;
+	--links-background: #000;
+	--links-icon: #fffffe;
+	--links-icon-hover: #f582ae;
+	--links-text: #ffffff;
 }
 
 * {

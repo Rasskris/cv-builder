@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 
+import { useTheme } from '../../../hooks';
 import { colorThemeList } from '../../../data/colorThemeList';
 import { ThemeItem } from './ThemeItem';
 import { BlockWrapper } from '../BlockWrapper';
@@ -7,6 +8,7 @@ import classes from './ThemeBlock.module.scss';
 
 export const ThemeBlock: FC = () => {
   const [selectedThemeId, setSelectedThemeId] = useState(1);
+  useTheme(selectedThemeId);
 
   return (
     <BlockWrapper blockName="Theme">

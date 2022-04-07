@@ -1,9 +1,9 @@
 export const colorThemeList = [
   {
     id: 1,
-    primaryColor: '#fef6e4',
-    secondaryColor: '#f3d2c1',
-    textColor: '#f582ae',
+    primaryColor: '#16161a',
+    secondaryColor: '#242629',
+    textColor: '#7f5af0',
   },
   {
     id: 2,
@@ -13,9 +13,9 @@ export const colorThemeList = [
   },
   {
     id: 3,
-    primaryColor: '#fffffe',
-    secondaryColor: '#e3f6f5',
-    textColor: '#ffd803',
+    primaryColor: '#0f0e17',
+    secondaryColor: '#fffffe',
+    textColor: '#d9376e',
   },
   {
     id: 4,
@@ -25,9 +25,9 @@ export const colorThemeList = [
   },
   {
     id: 5,
-    primaryColor: '#fffffe',
-    secondaryColor: '#d1d1e9',
-    textColor: '#6246ea',
+    primaryColor: '#16161a',
+    secondaryColor: '#242629',
+    textColor: '#059dc0',
   },
   {
     id: 6,
@@ -55,15 +55,15 @@ export const colorThemeList = [
   },
   {
     id: 10,
-    primaryColor: '#16161a',
-    secondaryColor: '#242629',
-    textColor: '#7f5af0',
+    primaryColor: '#fef6e4',
+    secondaryColor: '#f3d2c1',
+    textColor: '#f582ae',
   },
   {
     id: 11,
-    primaryColor: '#16161a',
-    secondaryColor: '#242629',
-    textColor: '#059dc0',
+    primaryColor: '#fffffe',
+    secondaryColor: '#d1d1e9',
+    textColor: '#6246ea',
   },
   {
     id: 12,
@@ -79,8 +79,8 @@ export const colorThemeList = [
   },
   {
     id: 14,
-    primaryColor: '#0f0e17',
-    secondaryColor: '#fffffe',
-    textColor: '#d9376e',
+    primaryColor: '#fffffe',
+    secondaryColor: '#e3f6f5',
+    textColor: '#ffd803',
   },
 ];

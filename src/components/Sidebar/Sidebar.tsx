@@ -2,12 +2,12 @@ import { FC } from 'react';
 
 import { ThemeBlock } from './ThemeBlock';
 import { AboutBlock } from './AboutBlock';
+import { SkillsBlock } from './SkillsBlock';
 import { ExperienceBlock } from './ExperienceBlock';
 import { ProjectsBlock } from './ProjectsBlock';
 import { LinksBlock } from './LinksBlock';
-import classes from './Sidebar.module.scss';
 import { Button } from '../ui';
-import { SkillsBlock } from './SkillsBlock';
+import classes from './Sidebar.module.scss';
 
 export const Sidebar: FC = () => {
   return (

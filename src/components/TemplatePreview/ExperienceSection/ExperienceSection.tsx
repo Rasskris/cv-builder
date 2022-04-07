@@ -26,10 +26,10 @@ export const ExperienceSection: FC<Props> = observer(({ experienceList }) => {
                 <p
                   className={classes.experience__position}
                 >{`${jobTitle} at ${employer}`}</p>
-                <p className={classes.experience__date}>{`${format(
-                  startEndDate[0] as Date,
-                  'MM/yyyy',
-                )} - ${format(startEndDate[1] as Date, 'MM/yyyy')} `}</p>
+                <p className={classes.experience__date}>
+                  {`${format(startEndDate[0] as Date, 'MM/yyyy')}
+                   - ${format(startEndDate[1] as Date, 'MM/yyyy')}`}
+                </p>
               </div>
             </StepLabel>
             <StepContent>
