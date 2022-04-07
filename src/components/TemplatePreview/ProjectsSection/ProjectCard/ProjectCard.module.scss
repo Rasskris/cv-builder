@@ -7,7 +7,7 @@
   justify-content: space-between;
 
   border: 1px solid transparent;
-  background-color: var(--m-background-color);
+  background-color: var(--projects-card-background);
 
   &__about {
     margin-bottom: 20px;
@@ -16,11 +16,12 @@
   &__title {
     margin-bottom: 15px;
 
-    color: #fff;
+    font-size: 16px;
+    color: var(--projects-card-title);
   }
 
   &__description {
-    color: gray;
+    color: var(	--projects-card-description);
   }
 
   &__links {
@@ -38,10 +39,12 @@
 
   &__linkIcon {
     margin-right: 5px;
-    color: #fff !important;
+    color: var(--projects-card-link) !important;
   }
 
   &__linkText {
     font-size: 12px !important;
+    text-decoration: none !important;
+    color: var(--projects-card-link) !important;
   }
 }
